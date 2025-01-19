@@ -98,7 +98,7 @@ Copy
 Edit
 cd client
 npm start
-The app should now be running on http://localhost:3000.
+The app should now be running on  http://localhost:3000.
 
 Usage
 Upload Audio/Text
@@ -114,11 +114,23 @@ Moderators can view flagged content and approve or reject it based on the analys
 API Endpoints
 /api/analyzeText
 POST: Analyze text for sentiment and harmful content.
-Request body: { "text": "Your text content here" }
-Response: { "sentiment": "positive/negative/neutral", "flagged": true/false, "reason": "aggression/suicidal ideation" }
+Request body: { 
+              "text": "Your text content here"
+              }
+Response: { 
+              "sentiment": "positive/negative/neutral", 
+              "flagged": true/false, 
+              "reason": "aggression/suicidal ideation" 
+              }
 /api/analyzeAudio
 POST: Convert audio to text and analyze it.
-Request body: { "audioFile": "<file>" }
-Response: { "transcription": "Transcribed text", "sentiment": "positive/negative/neutral", "flagged": true/false }
-Contributing
+Request body: {
+              "audioFile": "<file>" 
+              }
+Response: {
+              "transcription": "Transcribed text",
+              "sentiment": "positive/negative/neutral", 
+              "flagged": true/false 
+            }
+Contributing : 
 Contributions are welcome! Please fork this repository and submit a pull request with your improvements.
