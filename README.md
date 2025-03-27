@@ -37,7 +37,23 @@ A complete text analysis platform with AI-powered grammar checking, plagiarism d
                              cd frontend
                              npm install
                              npm run dev
-                             
+
+
+### 2. Backend Setup
+
+                            cd backend
+                            python -m venv venv
+                            source venv/bin/activate  # Linux/Mac
+                            venv\Scripts\activate     # Windows
+
+                            pip install -r requirements.txt
+                            python -m spacy download en_core_web_sm
+                            # Backend (http://localhost:8000)
+                            uvicorn main:app --reload
+                            # Frontend (http://localhost:3000)
+                            npm run dev
+                          
+Production :                docker-compose up --build -d
 
 📂 Project Structure
 
@@ -58,14 +74,3 @@ content-checker/
 │   └── package.json
 └── README.md
 
-
-### . Backend Setup
-```bash
-cd backend
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
-
-pip install -r requirements.txt
-python -m spacy download en_core_web_sm
-uvicorn main:app --reload
